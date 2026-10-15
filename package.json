@@ -1,0 +1,15 @@
+{
+  "name": "trustgate-ai",
+  "version": "1.0.0",
+  "description": "TrustGate AI (Lite V1) — Secure AI Agent Management as a Service",
+  "scripts": {
+    "dev": "npm run dev:all",
+    "dev:all": "npx concurrently -k -n \"SERVER,CLIENT\" -c \"cyan,magenta\" \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "build": "npm run build --prefix server && npm run build --prefix client",
+    "test": "npm run test --prefix server",
+    "check:ollama": "npm run check:ollama --prefix server"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.5"
+  }
+}
